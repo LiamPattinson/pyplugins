@@ -1,0 +1,18 @@
+[project]
+name = "radical"
+version = "0.1.0"
+description = "External plugin for pyplugins."
+authors = [{name = "Liam Pattinson"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest", "pyplugins"]
+
+[project.entry-points."pyplugins.templates"]
+s = "radical:super_s"
+
+[build-system]
+requires = ["setuptools > 58.0"]
+build-backend = "setuptools.build_meta"
