@@ -36,7 +36,7 @@ There are three component Python packages:
 - `pyplugins`: A library that can be extended with plugins. It provides a class
   `ArtPrinter` that generates ASCII 'art'. Other package maintainers can extend this
   class with new templates.
-- `ornithology`: A plugin for `pyplugins` that comes packages alongside `pyplugins` in
+- `ornithology`: A plugin for `pyplugins` that comes packaged alongside `pyplugins` in
   the `src` directory.
 - `radical`: A plugin for `pyplugins` that is packaged separately, with its own
   `pyproject.toml` file. This is located within the `plugins` directory.
@@ -54,8 +54,8 @@ As `ornithology` is packaged alongside `pyplugins`, the following call will also
 >>> ArtPrinter.print("bird")
 ```
 
-Note that there is no need to explicitly import this library, nor is it imported within
-`pyplugins`.
+Note that there is no need to explicitly import `ornithology`, nor is it imported within
+`pyplugins`. This is handled entirely via entry points.
 
 The `radical` library provides 'artwork' with the key `"s"`, but if we try to call the
 following, we should receive a `KeyError`:
